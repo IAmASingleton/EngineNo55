@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameApp", "GameApp\GameApp.vcxproj", "{8BD4D895-C500-4B5F-B9E6-0B481855351F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EngineNo55", "EngineNo55.vcxproj", "{7BE5BA25-7A35-4DAC-B00F-8D3DA52DAC2D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EngineNo55", "EngineNo55\EngineNo55.vcxproj", "{7BE5BA25-7A35-4DAC-B00F-8D3DA52DAC2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
