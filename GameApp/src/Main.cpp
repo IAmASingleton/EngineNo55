@@ -1,11 +1,14 @@
+#include <EngineNo55.h>
 
-namespace Number55
+class SandBox : public Number55::Application
 {
-__declspec(dllimport) void print();
-}
+public: 
+	SandBox() {}
+	~SandBox() {}
 
-int main(int argc, char* argv)
+};
+
+Number55::Application* Number55::CreateApplication()
 {
-	Number55::print();
-	return 0;
+	return new SandBox();
 }
