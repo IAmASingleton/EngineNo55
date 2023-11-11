@@ -1,14 +1,16 @@
 #include <EngineNo55.h>
 
-class SandBox : public Number55::Application
+// This is our "Game"
+class Game : public Number55::Application
 {
 public: 
-	SandBox() {}
-	~SandBox() {}
+	Game() {}
+	~Game() {}
 
 };
 
+// This is the Entry Point into the Engine
 Number55::Application* Number55::CreateApplication()
 {
-	return new SandBox();
+	return new Game();
 }
