@@ -18,7 +18,7 @@ namespace Number55
 		bool bEnd = false;
 		while (!bEnd)
 		{
-			printf("Welcome to Engine Number 55!\n");
+			//printf("Welcome to Engine Number 55!\n");
 			bEnd = true;
 		}
 	}
