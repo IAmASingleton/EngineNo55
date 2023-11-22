@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 #include "Application.h"
+#include "Events/ApplicationEvent.h"
+#include "Logging/Logger.h"
 
 namespace Number55
 {
@@ -18,7 +20,9 @@ namespace Number55
 		bool bEnd = false;
 		while (!bEnd)
 		{
-			//printf("Welcome to Engine Number 55!\n");
+			WindowResizeEvent e(1200, 720);
+			EN55_TRACE(e.ToString());
+
 			bEnd = true;
 		}
 	}

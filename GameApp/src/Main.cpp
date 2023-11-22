@@ -1,4 +1,5 @@
 #include <EngineNo55.h>
+#include <sstream>
 
 // This is our "Game"
 class Game : public Number55::Application
@@ -6,7 +7,6 @@ class Game : public Number55::Application
 public: 
 	Game() {}
 	~Game() {}
-
 };
 
 // This is the Entry Point into the Engine
