@@ -12,3 +12,8 @@
 #error EngineNo55 only supports Windows!
 
 #endif // EN55_PLATFORM_WINDOWS
+
+#define EN55_EXPAND_MACRO(x) x
+#define EN55_STRINGIFY_MACRO(x) #x
+
+#define BIT(x) (1 << x)

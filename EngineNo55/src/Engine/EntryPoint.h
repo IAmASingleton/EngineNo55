@@ -1,6 +1,5 @@
 #pragma once
 
-
 #ifdef EN55_PLATFORM_WINDOWS
 	
 extern Number55::Application* Number55::CreateApplication();

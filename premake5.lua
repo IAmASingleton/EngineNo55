@@ -25,6 +25,7 @@ project "EngineNo55"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/ext/spdlog/include/"
 	}
 
@@ -58,14 +59,16 @@ project "EngineNo55"
 	filter "configurations:Dist"
 		defines "EN55_DISTRIBUTION"
 		optimize "on"
-
+		
 project "GameApp"
-	location "GameApp"
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "off"
+	location "GameApp"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	files
 	{
@@ -75,8 +78,9 @@ project "GameApp"
 
 	includedirs
 	{
-		"EngineNo55/ext/spdlog/include/",
-		"EngineNo55/src/"
+		"%{wks.location}/EngineNo55/ext/spdlog/include",
+		"%{wks.location}/EngineNo55/src",
+		"%{wks.location}/EngineNo55/ext"
 	}
 
 	links
@@ -85,26 +89,20 @@ project "GameApp"
 	}
 
 	filter "system:windows"
-		cppdialect "C++17"
-		staticruntime "On"
+		defines "EN55_PLATFORM_WINDOWS"
 		systemversion "latest"
 
-	defines
-	{
-		"EN55_PLATFORM_WINDOWS",
-		"_WINDLL",
-		"_UNICODE",
-		"UNICODE"
-	}
-	
 	filter "configurations:Debug"
 		defines "EN55_DEBUG"
-		symbols "On"
-			
+		runtime "Debug"
+		symbols "on"
+
 	filter "configurations:Release"
-		defines "EN55_RELEASE"
+		defines "EN55_RELEASE_RELEASE"
+		runtime "Release"
 		optimize "on"
 
 	filter "configurations:Dist"
 		defines "EN55_DISTRIBUTION"
+		runtime "Release"
 		optimize "on"
