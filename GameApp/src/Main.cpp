@@ -2,7 +2,7 @@
 #include <sstream>
 
 // This is our "Game"
-class Game : public Number55::Application
+class Game : public Engine55::Application
 {
 public: 
 	Game() {}
@@ -10,7 +10,7 @@ public:
 };
 
 // This is the Entry Point into the Engine
-Number55::Application* Number55::CreateApplication()
+Engine55::Application* Engine55::CreateApplication()
 {
 	return new Game();
 }

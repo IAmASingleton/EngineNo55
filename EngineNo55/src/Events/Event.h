@@ -1,11 +1,11 @@
 #pragma once
 
-#include <string>
-#include <functional>
+#include "e55pch.h"
+
 #include <Engine/Core.h>
 
 
-namespace Number55 
+namespace Engine55 
 {
 	enum class EventType {
 		None = 0,

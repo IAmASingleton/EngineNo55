@@ -1,10 +1,10 @@
 #pragma once
 
+#include "e55pch.h"
+
 #include "Event.h"
 
-#include <sstream>
-
-namespace Number55 
+namespace Engine55 
 {
 	class KeyEvent : public Event
 	{

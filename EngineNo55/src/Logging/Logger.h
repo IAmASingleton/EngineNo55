@@ -1,9 +1,11 @@
 #pragma once
 
+#include "e55pch.h"
+
 #include <spdlog/spdlog.h>
 #include "Engine/Core.h"
 
-namespace Number55{
+namespace Engine55{
 
 	class ENGINE55_API Logger
 	{
@@ -20,15 +22,15 @@ namespace Number55{
 }
 
 // Core Log Macros
-#define EN55_CORE_TRACE(...)	::Number55::Logger::GetEngineLogger()->trace(__VA_ARGS__)
-#define EN55_CORE_INFO(...)		::Number55::Logger::GetEngineLogger()->info(__VA_ARGS__)
-#define EN55_CORE_WARN(...)		::Number55::Logger::GetEngineLogger()->warn(__VA_ARGS__)
-#define EN55_CORE_ERROR(...)	::Number55::Logger::GetEngineLogger()->error(__VA_ARGS__)
-#define EN55_CORE_FATAL(...)	::Number55::Logger::GetEngineLogger()->critical(__VA_ARGS__)
+#define EN55_CORE_TRACE(...)	::Engine55::Logger::GetEngineLogger()->trace(__VA_ARGS__)
+#define EN55_CORE_INFO(...)		::Engine55::Logger::GetEngineLogger()->info(__VA_ARGS__)
+#define EN55_CORE_WARN(...)		::Engine55::Logger::GetEngineLogger()->warn(__VA_ARGS__)
+#define EN55_CORE_ERROR(...)	::Engine55::Logger::GetEngineLogger()->error(__VA_ARGS__)
+#define EN55_CORE_FATAL(...)	::Engine55::Logger::GetEngineLogger()->critical(__VA_ARGS__)
 
 // Client Log Macros
-#define EN55_TRACE(...)			::Number55::Logger::GetClientLogger()->trace(__VA_ARGS__)
-#define EN55_INFO(...)			::Number55::Logger::GetClientLogger()->info(__VA_ARGS__)
-#define EN55_WARN(...)			::Number55::Logger::GetClientLogger()->warn(__VA_ARGS__)
-#define EN55_ERROR(...)			::Number55::Logger::GetClientLogger()->error(__VA_ARGS__)
-#define EN55_FATAL(...)			::Number55::Logger::GetClientLogger()->critical(__VA_ARGS__)
+#define EN55_TRACE(...)			::Engine55::Logger::GetClientLogger()->trace(__VA_ARGS__)
+#define EN55_INFO(...)			::Engine55::Logger::GetClientLogger()->info(__VA_ARGS__)
+#define EN55_WARN(...)			::Engine55::Logger::GetClientLogger()->warn(__VA_ARGS__)
+#define EN55_ERROR(...)			::Engine55::Logger::GetClientLogger()->error(__VA_ARGS__)
+#define EN55_FATAL(...)			::Engine55::Logger::GetClientLogger()->critical(__VA_ARGS__)

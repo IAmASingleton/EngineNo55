@@ -1,4 +1,5 @@
 #pragma once
+#include "e55pch.h"
 
 #ifdef EN55_PLATFORM_WINDOWS
 	#ifdef EN55_BUILD_DLL

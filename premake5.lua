@@ -17,6 +17,9 @@ project "EngineNo55"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "e55pch.h"
+	pchsource "EngineNo55/src/e55pch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -78,7 +81,7 @@ project "GameApp"
 
 	includedirs
 	{
-		"%{wks.location}/EngineNo55/ext/spdlog/include",
+		"%{wks.location}/EngineNo55/ext/spdlog/include/",
 		"%{wks.location}/EngineNo55/src",
 		"%{wks.location}/EngineNo55/ext"
 	}

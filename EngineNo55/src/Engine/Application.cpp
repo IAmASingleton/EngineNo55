@@ -1,10 +1,10 @@
-#include <stdio.h>
+#include "e55pch.h"
 
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
 #include "Logging/Logger.h"
 
-namespace Number55
+namespace Engine55
 {
 	Application::Application()
 	{
