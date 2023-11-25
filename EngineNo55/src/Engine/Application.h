@@ -1,9 +1,10 @@
 #pragma once
+#include "e55pch.h"
 
 #include "Core.h"
 #include "Events/Event.h"
 
-namespace Number55
+namespace Engine55
 {
 	class ENGINE55_API Application
 	{

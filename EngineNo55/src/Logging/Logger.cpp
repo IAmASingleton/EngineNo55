@@ -1,7 +1,9 @@
+#include "e55pch.h"
+
 #include "Logger.h"
 #include <spdlog/sinks/stdout_color_sinks.h>
 
-namespace Number55 
+namespace Engine55 
 {
 	std::shared_ptr<spdlog::logger> Logger::sEngineLogger;
 	std::shared_ptr<spdlog::logger> Logger::sClientLogger;
