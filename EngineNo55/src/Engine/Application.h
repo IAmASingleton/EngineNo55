@@ -3,6 +3,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Window.h"
 
 namespace Engine55
 {
@@ -13,6 +14,9 @@ namespace Engine55
 		virtual ~Application();
 
 		void run();
+	private:
+		std::unique_ptr<Window> mpWindow;
+		bool mbActive{false};
 	};
 
 	// To be defined in client

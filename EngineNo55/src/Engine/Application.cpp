@@ -2,12 +2,14 @@
 
 #include "Application.h"
 #include "Events/ApplicationEvent.h"
-#include "Logging/Logger.h"
+
+#include <GLFW/glfw3.h>
 
 namespace Engine55
 {
 	Application::Application()
 	{
+		mpWindow = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -17,13 +19,13 @@ namespace Engine55
 
 	void Application::run()
 	{
-		bool bEnd = false;
-		while (!bEnd)
+		mbActive = true;
+		while (mbActive)
 		{
-			WindowResizeEvent e(1200, 720);
-			EN55_TRACE(e.ToString());
+			glClearColor(0, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			mpWindow->OnUpdate();
 
-			bEnd = true;
 		}
 	}
 }

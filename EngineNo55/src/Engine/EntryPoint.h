@@ -1,6 +1,8 @@
 #pragma once
 #include "e55pch.h"
 
+#include "Logging/Logger.h"
+
 #ifdef EN55_PLATFORM_WINDOWS
 	
 extern Engine55::Application* Engine55::CreateApplication();
