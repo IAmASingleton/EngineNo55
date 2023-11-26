@@ -3,6 +3,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Events/ApplicationEvent.h"
 #include "Window.h"
 
 namespace Engine55
@@ -14,7 +15,11 @@ namespace Engine55
 		virtual ~Application();
 
 		void run();
+
+		void onEvent(Event& e);
 	private:
+		bool onWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> mpWindow;
 		bool mbActive{false};
 	};
