@@ -1,5 +1,5 @@
 workspace "EngineNo55"
-	architecture "x64"
+architecture "x64"
 
 	configurations {
 		"Debug",
@@ -9,6 +9,11 @@ workspace "EngineNo55"
 
 	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+	IncludeDir = {}
+	IncludeDir["GLFW"] = "EngineNo55/ext/GLFW/include"
+
+	include "EngineNo55/ext/GLFW"
+	
 project "EngineNo55"
 	location "EngineNo55"
 	kind "SharedLib"
@@ -29,7 +34,15 @@ project "EngineNo55"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/ext/spdlog/include/"
+		"%{prj.name}/ext/spdlog/include/",
+		"%{IncludeDir.GLFW}"	
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"

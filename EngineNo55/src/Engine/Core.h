@@ -14,6 +14,18 @@
 
 #endif // EN55_PLATFORM_WINDOWS
 
+#ifdef EN55_ENABLE_ASSERTS
+#define EN55_ASSERT(x, ...) { if(!(x)) { 
+							EN55_ERROR("Assertion Failed: {0}", __VA_ARGS__);
+							__debugbreak(); }}
+#define EN55_CORE_ASSERT(x, ...) { if(!(x)) { 
+							EN55_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__);
+							__debugbreak(); }}
+#else
+#define EN55_ASSERT(x, ...)
+#define EN55_CORE_ASSERT(x, ...)
+#endif
+
 #define EN55_EXPAND_MACRO(x) x
 #define EN55_STRINGIFY_MACRO(x) #x
 
