@@ -26,7 +26,7 @@ namespace Engine55
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
 
-		GLFWwindow* mWindow;
+		GLFWwindow* mpWindow;
 
 		struct WindowData
 		{
